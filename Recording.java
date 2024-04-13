@@ -12,7 +12,7 @@ public abstract class Recording extends Item implements PriceableWithVAT25 {
 		super(name);
 		this.artist = artist;
 		this.year = year;
-		this.condition = (condition < 0 || condition > 0) ? 0 : condition;
+		this.condition = (condition < 0 || condition > 10) ? 0 : condition;
 		this.price = price;	
 	}
 
@@ -42,7 +42,7 @@ public abstract class Recording extends Item implements PriceableWithVAT25 {
 	
 	@Override	
 	public String toString() {
-		return String.format("name='%s', artist='%s', year=%d, condition=%d, original price=%.1f, price=%.1f, price+vat=%.1f", getName(), getArtist(), getYear(), 
+		return String.format("%s { name='%s', artist='%s', year=%d, condition=%d, original price=%.1f, price=%.1f, price+VAT=%.1f", getType(), getName(), getArtist(), getYear(), 
 				getCondition(), getOriginalPrice(), getPrice(), getPriceWithVAT());
 	}
 /*	

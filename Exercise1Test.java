@@ -1,5 +1,5 @@
 package Excercise1;
-
+import java.util.Locale;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Test;
@@ -18,6 +18,11 @@ import static org.junit.jupiter.api.Assertions.*;
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class Exercise1Test {
+	
+	static {
+        Locale.setDefault(Locale.ENGLISH);
+    }
+	
     private static final String ORDER_INCORRECT_VALUE_EXCL_VAT = "Värdet exkl. moms stämmer inte.";
     private static final String ORDER_INCORRECT_VALUE_INCL_VAT = "Värdet inkl. moms stämmer inte.";
     private static final String BOUND_BOOK_INCORRECT_VALUE_EXCL_VAT = "Värdet (exkl. moms) på en inbunden bok beräknas inte rätt.";

@@ -25,9 +25,9 @@ public class Book extends Item implements PriceableWithVAT6 {
 	
 	@Override	
 	public String toString() {
-		//return String.format("Book { name='%s', author='%s', bound=%b, price=%.1f, price+vat=%.1f }", getName(), this.author, this.bound, this.price, getPriceWithVAT());
+		return String.format("Book { name = '%s', author = '%s', bound=%b, price=%.1f, price+vat=%.1f }", getName(), author, bound, getPrice(), getPriceWithVAT());
 	
-	   return "Book { name = '" + getName() + "', author = '" + author + "', " + "bound = " + bound + ", price= " + getPrice() + ", price+vat " + getPriceWithVAT();
+	 //  return "Book { name = '" + getName() + "', author = '" + author + "', " + "bound = " + bound + ", price= " + getPrice() + ", price+vat " + getPriceWithVAT();
 	}
 	
 //	Book { name='Beethoven: a biography', author='Holmqvist', bound=false, price=400.0, price+vat=424.0 }
