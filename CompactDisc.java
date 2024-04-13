@@ -1,4 +1,6 @@
-package Exercise4;
+package Excercise1;
+
+
 
 public class CompactDisc extends Recording {
 	public CompactDisc(String name, String artist, int year, int condition, double price) {

@@ -1,24 +1,27 @@
-package Exercise4;
+package Excercise1;
+
+
 
 public abstract class Recording extends Item implements PriceableWithVAT25 {
-	final private String artist;
-	final private int year;
+	private final String artist;
+	private final int year;
 	private int condition;
-	final private double price;
+	private final double price;
 	
 	protected Recording(String name, String artist, int year, int condition, double price){
 		super(name);
 		this.artist = artist;
 		this.year = year;
-		this.condition = condition;
+		this.condition = (condition < 0 || condition > 0) ? 0 : condition;
 		this.price = price;	
 	}
 
 	abstract public String getType();
 	
+	@Override
 	public double getPrice() {
-		double price = 0.1 * condition * getOriginalPrice();
-        return (price < 10) ? 10 : price;
+		double calculated = 0.1 * condition * price;
+        return (calculated  < 10) ? 10 : calculated ;
 	}
 	
 	public String getArtist() {

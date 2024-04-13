@@ -1,4 +1,6 @@
-package Exercise4;
+package Excercise1;
+
+
 
 abstract public class Item implements Priceable {
 	final private String name;

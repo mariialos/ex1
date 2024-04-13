@@ -1,6 +1,4 @@
-package Exercise4;
-
-
+package Excercise1;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.MethodOrderer;

@@ -1,4 +1,6 @@
-package Exercise4;
+package Excercise1;
+
+
 
 public interface PriceableWithVAT25 extends Priceable {
 	@Override
